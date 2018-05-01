@@ -19,8 +19,9 @@ const mainReducer = (state = defaultState, action) => {
     return {
       ...state,
       data: action.data,
-      // history: _.uniq(...state.history, action.data)
-      history: ([...state.history, ...action.data])
+      // history: ([...state.history, ...action.data])
+      // history: [...action.data, ...state.history]
+      history: [...state.history, ...state.data]
     }
   } else {
     return state;

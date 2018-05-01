@@ -8,7 +8,7 @@ import uuid from 'uuid';
 class Blocks extends React.Component {
   componentDidMount() {
     this.props.loadCoin();
-    setInterval(() => this.props.loadCoin(), 60*1000);
+    setInterval(() => this.props.loadCoin(), 6*1000);
   }
 
   render(){
